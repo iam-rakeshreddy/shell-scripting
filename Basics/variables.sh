@@ -3,7 +3,7 @@
 name="Virat Kohli"
 age=37
 
-# Both of this works --$variable_name/${variable_name}
+# Both of this works --$variable_name / ${variable_name}
 
 echo "Hello! My name is ${name} and I'm ${age} old"      
 
