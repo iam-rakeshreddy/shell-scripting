@@ -4,7 +4,7 @@
 
 This repository contains my learning notes, examples, and practice scripts for **Shell Scripting in Linux**.
 
-The goal of this repository is to understand Linux shell scripting concepts, automate repetitive tasks, and build a strong foundation for system administration, DevOps, and automation.
+The goal of this repository is to understand Linux shell scripting concepts, automate repetitive tasks.
 
 ## 🎯 Learning Objectives
 
