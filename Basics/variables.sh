@@ -3,7 +3,9 @@
 name="Virat Kohli"
 age=37
 
-echo "Hello! My name is $name and I'm $age old"
+# Both of this works --$variable_name/${variable_name}
+
+echo "Hello! My name is ${name} and I'm ${age} old"      
 
 #using commands in variables
 
