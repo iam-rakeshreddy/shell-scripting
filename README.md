@@ -280,7 +280,78 @@ Your path is: C:\Users\Rahul\Documents
 ```
 
  
-## 8. Operators
+## 8. Conditional Statements
+
+Conditional statements execute commands based on whether a condition is true or false.
+
+### if Statement
+
+```bash
+#!/bin/bash
+
+read -r -p "Enter your age: " age
+
+if [ "$age" -ge 18 ]; then
+    echo "You are an adult."
+fi
+```
+
+This example assumes the input is a valid integer.
+
+### if-else Statement
+
+```bash
+#!/bin/bash
+
+read -r -p "Enter a number: " number
+
+if [ "$number" -gt 0 ]; then
+    echo "Positive number"
+else
+    echo "Zero or negative number"
+fi
+```
+
+### if-elif-else Statement
+
+```bash
+#!/bin/bash
+
+read -r -p "Enter a number: " number
+
+if [ "$number" -gt 0 ]; then
+    echo "Positive"
+elif [ "$number" -lt 0 ]; then
+    echo "Negative"
+else
+    echo "Zero"
+fi
+```
+
+### Case Statement
+
+```bash
+#!/bin/bash
+
+read -r -p "Enter an environment (dev/test/prod): " environment
+
+case "$environment" in
+    dev)
+        echo "Development environment"
+        ;;
+    test)
+        echo "Testing environment"
+        ;;
+    prod)
+        echo "Production environment"
+        ;;
+    *)
+        echo "Invalid environment"
+        ;;
+esac
+```
+
+## 9. Operators
 
 Operators perform arithmetic, comparisons, and logical operations.
 
@@ -326,81 +397,11 @@ fi
 ```bash
 name="Linux"
 
-if [[ "$name" == "Linux" ]]; then
+if [ "$name" == "Linux" ]; then
     echo "Match found"
 fi
 ```
 
-## 9. Conditional Statements
-
-Conditional statements execute commands based on whether a condition is true or false.
-
-### if Statement
-
-```bash
-#!/bin/bash
-
-read -r -p "Enter your age: " age
-
-if [[ "$age" -ge 18 ]]; then
-    echo "You are an adult."
-fi
-```
-
-This example assumes the input is a valid integer.
-
-### if-else Statement
-
-```bash
-#!/bin/bash
-
-read -r -p "Enter a number: " number
-
-if [[ "$number" -gt 0 ]]; then
-    echo "Positive number"
-else
-    echo "Zero or negative number"
-fi
-```
-
-### if-elif-else Statement
-
-```bash
-#!/bin/bash
-
-read -r -p "Enter a number: " number
-
-if [[ "$number" -gt 0 ]]; then
-    echo "Positive"
-elif [[ "$number" -lt 0 ]]; then
-    echo "Negative"
-else
-    echo "Zero"
-fi
-```
-
-### Case Statement
-
-```bash
-#!/bin/bash
-
-read -r -p "Enter an environment (dev/test/prod): " environment
-
-case "$environment" in
-    dev)
-        echo "Development environment"
-        ;;
-    test)
-        echo "Testing environment"
-        ;;
-    prod)
-        echo "Production environment"
-        ;;
-    *)
-        echo "Invalid environment"
-        ;;
-esac
-```
 
 ## 10. Loops
 
