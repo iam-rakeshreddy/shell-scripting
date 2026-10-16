@@ -31,16 +31,16 @@ echo "After incrementing, a is: $a"
 echo "After decrementing, b is: $b"
 
 # Comparison operations
-if ((a > b)); then
-    echo "a is greater than b"
-elif ((a < b)); then
-    echo "a is less than b"
-else
-    echo "a is equal to b"
+if ((a > b)); then                                   #if [ $((a > b)) -eq 1 ]; then
+    echo "a is greater than b"                       #     echo "a is greater than b"
+elif ((a < b)); then                                 #elif [ $((a < b)) -eq 1 ]; then
+    echo "a is less than b"                          #     echo "a is less than b"
+else                                                 #else
+    echo "a is equal to b"                           #     echo "a is equal to b"
 fi
 
 # Logical operations
-if ((a > 0 && b > 0)); then
-    echo "Both a and b are positive"
+if ((a > 0 && b > 0)); then                          #if [ $a -gt 0 ] && [ $b -gt 0 ]; then
+    echo "Both a and b are positive"                 #     echo "Both a and b are positive"
 fi  
 
