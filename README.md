@@ -235,12 +235,24 @@ echo "$PI"
 
 The `read` command accepts input from the user.
 
+### Using `read -p`
+
 ```bash
 #!/bin/bash
 
-read -r -p "Enter your name: " name
+read -p "Enter your name: " name
 
-echo "Hello, $name!"
+echo "Your name is: $name"
+```
+Input:
+```
+1.Rahul
+2.Hello\ World
+```
+Output:
+```
+1.Your name is Rahul
+2.Your name is Hello World
 ```
 
 ### Reading Two Values
