@@ -237,6 +237,8 @@ The `read` command accepts input from the user.
 
 ### Using `read -p`
 
+Here `read` reads input,`-p` prompts message
+
 ```bash
 #!/bin/bash
 
@@ -255,18 +257,28 @@ Output:
 2.Your name is Hello World
 ```
 
-### Reading Two Values
+
+### Using `read -r -p`
+
+Here `read` reads input,`-p` prompts message, `-r` reads without interpreting backslash-like raw input
 
 ```bash
-read -r -p "Enter first number: " a
-read -r -p "Enter second number: " b
+#!/bin/bash
+read -r -p "Enter a Windows path: " path
 
-echo "First number: $a"
-echo "Second number: $b"
+echo "Your path is: $path"
+```
+Input:
+```
+C:\Users\Rahul\Documents
 ```
 
-Use `read -r` to prevent backslashes from being interpreted as escape characters.
+Output:
+```
+Your path is: C:\Users\Rahul\Documents
+```
 
+ 
 ## 8. Operators
 
 Operators perform arithmetic, comparisons, and logical operations.
