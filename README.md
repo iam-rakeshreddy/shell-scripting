@@ -264,6 +264,7 @@ Here `read` reads input,`-p` prompts message, `-r` reads without interpreting ba
 
 ```bash
 #!/bin/bash
+
 read -r -p "Enter a Windows path: " path
 
 echo "Your path is: $path"
