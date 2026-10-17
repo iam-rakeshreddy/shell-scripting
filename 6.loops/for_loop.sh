@@ -33,3 +33,26 @@ for item in 1 "two" 3.0 "four"
 do
   echo "Item: $item"
 done
+
+
+#Iterate values from File
+#Example: items.txt contains names like apple, banana, cherry, date
+
+items=$(cat items.txt)
+for item in $items
+do
+  echo "Item from file: $item"
+done
+
+#output: Item from file: apple
+#         Item from file: banana
+#         Item from file: cherry
+#         Item from file: date
+
+
+#Loop through an array of multiple data types
+mixed_array=(1 "two" 3.0 "four" "five")
+for element in "${mixed_array[@]}"
+do
+  echo "Element: $element"
+done
